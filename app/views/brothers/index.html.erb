@@ -1,0 +1,6 @@
+<% @brothers.each do |bro| %>
+  <p><%= "#{bro.first_name} #{bro.last_name}" %></p>
+  <% if bro.parent %>
+    <p><%=  "- #{bro.parent.first_name} #{bro.parent.last_name}" %></p>
+  <% end %>
+<% end %>

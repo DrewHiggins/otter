@@ -11,6 +11,7 @@ tau_fam = Family.find_or_create_by(name: 'Tau')
 # Faith Milazzo is the founding father, so put her in first
 Brother.create(first_name: 'Faith', last_name: 'Milazzo', status: 'Alumni')
 require 'csv'
+orphans = [] # to store bros who come earlier than their bigs in the list
 CSV.foreach("/Users/drew/Code/otter/db/csv_data/Tau.csv") do |line|
   # get name info
   name = line[1].split(" ")
@@ -31,6 +32,17 @@ CSV.foreach("/Users/drew/Code/otter/db/csv_data/Tau.csv") do |line|
   # add their big
   big_name = line[3].split(" ")
   big = Brother.find_by(first_name: big_name[0], last_name: big_name[1])
-  new_bro.parent = big
+  unless big.nil?
+    new_bro.parent = big
+  else
+    orphans.push({ brother: new_bro, big_name: big_name})
+  end
   new_bro.save
+end
+
+orphans.each do |orphan|
+  brother = orphan[:brother]
+  big = Brother.find_by(first_name: orphan[:big_name][0], last_name: orphan[:big_name][1])
+  brother.parent = big unless big.nil?
+  brother.save
 end
