@@ -1,0 +1,2 @@
+module RushClassesHelper
+end

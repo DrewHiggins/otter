@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  greek_name: MyString
+  year: 
+  semester: false
+  initiation_date: 2016-07-30
+
+two:
+  greek_name: MyString
+  year: 
+  semester: false
+  initiation_date: 2016-07-30

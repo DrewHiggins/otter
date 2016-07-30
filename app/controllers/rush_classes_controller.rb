@@ -1,0 +1,2 @@
+class RushClassesController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class BrothersController < ApplicationController
+end
