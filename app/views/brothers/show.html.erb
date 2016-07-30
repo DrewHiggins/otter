@@ -1,0 +1,9 @@
+<h1><%= "#{@brother.first_name} #{@brother.last_name}" %></h1>
+<% unless @brother.rush_class.nil? %>
+  <p>Rush Class: <%= @brother.rush_class.greek_name %></p>
+  <p>Joined: <%= "#{@brother.rush_class.semester} #{@brother.rush_class.year}" %></p>
+<% else %>
+  <p>Founding father</p>
+<% end %>
+<%= content_tag "div", id: "tree", data: {org: @org_chart_data} do %>
+<% end %>
