@@ -45,7 +45,10 @@
   &.expelled {
     background-color: #d9534f;
   }
-  &.resigned {
+  &.inactive {
     background-color: gray;
+  }
+  &.resigned {
+    background-color: #f0ad4e;
   }
 }
