@@ -19,6 +19,14 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+a {
+  color: #400080;
+}
+a:hover, a:focus {
+  color: #400080;
+  text-decoration: underline;
+}
+
 .navbar-inverse {
   background-color: #400080;
 }

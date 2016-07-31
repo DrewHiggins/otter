@@ -3,9 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .tree-container {
+  border: 1px dotted #ccc;
   max-width: 100%;
   overflow-y: auto;
-  border: 1px dotted #ccc;
+  padding: 10px;
 }
 
 .google-visualization-orgchart-linebottom {
@@ -25,5 +26,26 @@
   &.google-visualization-orgchart-node-medium {
     background: rgba(64, 0, 128, 0.8) !important;
     color: white;
+  }
+}
+
+.status-pill {
+  border-radius: 5px;
+  color: white;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 3px 10px;
+  text-transform: uppercase;
+  &.active {
+    background-color: #5cb85c;
+  }
+  &.alumni {
+    background-color: #337ab7;
+  }
+  &.expelled {
+    background-color: #d9534f;
+  }
+  &.resigned {
+    background-color: gray;
   }
 }

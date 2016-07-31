@@ -14,7 +14,7 @@
     <% else %>
       <p>Founding father</p>
     <% end %>
-    <p><strong>Status: </strong> <%= @brother.status %></p>
+    <p><strong>Status: </strong> <%= status_pill(@brother.status) %></p>
   </div>
   <div class="col-sm-6">
     <% unless @brother.parent.nil? %>
@@ -30,13 +30,17 @@
           <%= link_to little.full_name, little %>
         <% end %>
       <% end %>
+      <% if @brother.children.empty? %>
+        <%= content_tag(:span, content_tag(:em, "No littles"), style: 'color:#aaa;') %>
+      <% end %>
     </p>
   </div>
 </div>
 
-<h2>Family Tree</h2>
-
-<div class="tree-container">
-  <%= content_tag "div", id: "tree", data: {org: @org_chart_data} do %>
-  <% end %>
-</div>
+<% unless @brother.children.empty? %>
+  <h2>Family Tree</h2>
+  <div class="tree-container">
+    <%= content_tag "div", id: "tree", data: {org: @org_chart_data} do %>
+    <% end %>
+  </div>
+<% end %>
