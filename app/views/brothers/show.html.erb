@@ -17,6 +17,7 @@
     <p><strong>Status: </strong> <%= status_pill(@brother.status) %></p>
   </div>
   <div class="col-sm-6">
+    <p><strong>Family: </strong> <%= @brother.family.name %></p>
     <% unless @brother.parent.nil? %>
       <p><strong>Big Brother: </strong>
         <%=link_to @brother.parent.full_name, @brother.parent%>
