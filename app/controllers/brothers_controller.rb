@@ -12,9 +12,7 @@ class BrothersController < ApplicationController
     @org_chart_data = []
     @brother.descendants.each do |d|
       @org_chart_data.push([
-        "#{d.first_name} #{d.last_name}",
-        "#{d.parent.first_name} #{d.parent.last_name}",
-        ""
+        d.full_name, d.parent.full_name,""
       ])
     end
   end

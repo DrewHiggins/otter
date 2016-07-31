@@ -1,3 +1,29 @@
 // Place all the styles related to the Brothers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tree-container {
+  max-width: 100%;
+  overflow-y: auto;
+  border: 1px dotted #ccc;
+}
+
+.google-visualization-orgchart-linebottom {
+  border-bottom: 1px solid #400080 !important;
+}
+.google-visualization-orgchart-linetop {
+  border-top: 1px solid #400080 !important;
+}
+.google-visualization-orgchart-lineleft {
+  border-left: 1px solid #400080 !important;
+}
+.google-visualization-orgchart-lineright {
+  border-right: 1px solid #400080 !important;
+}
+.google-visualization-orgchart-node {
+  border: 0 !important;
+  &.google-visualization-orgchart-node-medium {
+    background: rgba(64, 0, 128, 0.8) !important;
+    color: white;
+  }
+}

@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Otter</title>
+  <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
   <!-- Google Org Charts JS source -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -10,7 +11,33 @@
 </head>
 <body>
 
-<%= yield %>
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <%= image_tag "otter.png" %>
+        </a>
+      </div>
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+  <footer>
+    <p>
+      <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by
+      <a href="http://drewhiggins.com">Drew Higgins</a>
+    </p>
+  </footer>
 
 </body>
 </html>

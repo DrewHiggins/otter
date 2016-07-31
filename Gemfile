@@ -45,3 +45,7 @@ end
 
 # ancestry for tree structure
 gem 'ancestry'
+# twitter bootstrap
+gem 'bootstrap-sass', '~> 3.3.6'
+
+gem 'font-awesome-sass'

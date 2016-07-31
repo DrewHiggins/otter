@@ -1,9 +1,42 @@
-<h1><%= "#{@brother.first_name} #{@brother.last_name}" %></h1>
-<% unless @brother.rush_class.nil? %>
-  <p>Rush Class: <%= @brother.rush_class.greek_name %></p>
-  <p>Joined: <%= "#{@brother.rush_class.semester} #{@brother.rush_class.year}" %></p>
-<% else %>
-  <p>Founding father</p>
-<% end %>
-<%= content_tag "div", id: "tree", data: {org: @org_chart_data} do %>
-<% end %>
+<h1><%= @brother.full_name %></h1>
+<hr />
+
+<div class="row">
+  <div class="col-sm-6">
+    <% unless @brother.rush_class.nil? %>
+      <p>
+        <strong>Rush Class</strong>: <%= @brother.rush_class.greek_name %>
+      </p>
+      <p>
+        <strong>Joined</strong>:
+        <%= "#{@brother.rush_class.semester} #{@brother.rush_class.year}" %>
+      </p>
+    <% else %>
+      <p>Founding father</p>
+    <% end %>
+    <p><strong>Status: </strong> <%= @brother.status %></p>
+  </div>
+  <div class="col-sm-6">
+    <% unless @brother.parent.nil? %>
+      <p><strong>Big Brother: </strong>
+        <%=link_to @brother.parent.full_name, @brother.parent%>
+      </p>
+    <% end %>
+    <p><strong>Little Brothers: </strong>
+      <% @brother.children.each do |little| %>
+        <% unless little == @brother.children.last %>
+          <%= link_to "#{little.full_name}\, ", little %>
+        <% else %>
+          <%= link_to little.full_name, little %>
+        <% end %>
+      <% end %>
+    </p>
+  </div>
+</div>
+
+<h2>Family Tree</h2>
+
+<div class="tree-container">
+  <%= content_tag "div", id: "tree", data: {org: @org_chart_data} do %>
+  <% end %>
+</div>

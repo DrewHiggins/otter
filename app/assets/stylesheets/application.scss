@@ -1,0 +1,66 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+.navbar-inverse {
+  background-color: #400080;
+}
+
+.navbar-inverse {
+  .navbar-nav {
+    li {
+      &active {
+        a {
+          background-color: #26004d;
+          color: white;
+        }
+      }
+      a {
+        color: #ffdb4d;
+      }
+    }
+  }
+  .navbar-brand {
+    img {
+      max-height: 100%;
+      width: auto;
+    }
+  }
+  input[type="text"] {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 0;
+    width: 100%;
+  }
+}
+
+footer {
+  margin-top: 1em;
+  a {
+    color: #aaa;
+    font-weight: 500;
+  }
+  p {
+    color: #ccc;
+    text-align: center;
+  }
+  @media (max-height: 450px) {
+    display: none; /* don't display if the window is real short */
+  }
+}
