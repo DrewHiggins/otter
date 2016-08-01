@@ -1,3 +1,8 @@
-<% @brothers.each do |bro| %>
-  <%= link_to "#{bro.first_name} #{bro.last_name}", bro %><br />
+<h1>Brothers</h1>
+<% @brother_dict.each do |letter, brother_list| %>
+  <h2><%= letter.to_s.upcase %></h2>
+  <hr />
+  <% brother_list.each do |brother| %>
+    <%= link_to brother.full_name, brother %><br />
+  <% end %>
 <% end %>

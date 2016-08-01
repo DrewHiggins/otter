@@ -33,6 +33,13 @@ a:hover, a:focus {
 
 .navbar-inverse {
   .navbar-nav {
+    ul.dropdown-menu {
+      li {
+        a {
+          color: #400080;
+        }
+      }
+    }
     li {
       &active {
         a {

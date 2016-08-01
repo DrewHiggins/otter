@@ -52,3 +52,11 @@
     background-color: #f0ad4e;
   }
 }
+
+input{
+  @media (max-width: 767px) {
+    &#brother_last_name {
+      margin-top: 1em;
+    }
+  }
+}

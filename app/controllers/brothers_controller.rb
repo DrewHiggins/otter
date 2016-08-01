@@ -1,6 +1,12 @@
 class BrothersController < ApplicationController
   def index
-    @brothers = Brother.all
+    @brothers = Brother.all.order(:last_name)
+    @brother_dict = {}
+    @brothers.each do |brother|
+      first_letter = brother.last_name[0].downcase.to_sym
+      @brother_dict[first_letter] = [] if @brother_dict[first_letter].nil?
+      @brother_dict[first_letter].push(brother)
+    end
     respond_to do |format|
       format.html #index.html.erb
       format.json { render json: @brothers } # handle JSON calls for searching
