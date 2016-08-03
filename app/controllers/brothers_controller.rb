@@ -18,7 +18,7 @@ class BrothersController < ApplicationController
     @org_chart_data = []
     @brother.descendants.each do |d|
       @org_chart_data.push([
-        d.full_name, d.parent.full_name,""
+        d.full_name, d.parent.full_name, ""
       ])
     end
   end
@@ -33,6 +33,20 @@ class BrothersController < ApplicationController
     @brother = Brother.create(brother_params)
     if @brother.save
       redirect_to @brother, notice: 'Successfully created brother!'
+    end
+  end
+
+  def edit
+    @brother = Brother.find(params[:id])
+  end
+
+  def update
+    @brother = Brother.find(params[:id])
+
+    if @brother.update_attributes(brother_params)
+      redirect_to :action => 'show', id: @brother.id
+    else
+      render :action => 'edit'
     end
   end
 

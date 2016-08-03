@@ -1,4 +1,12 @@
-<h1><%= @brother.full_name %></h1>
+<h1>
+  <%= @brother.full_name %>
+  <div class="admin-buttons">
+    <% if current_user && current_user.username == 'historian' %>
+      <%= link_to raw('<i class="fa fa-pencil"></i>'),
+        {:action => 'edit', id: @brother.id} %>
+    <% end %>
+  </div>
+</h1>
 <hr />
 
 <div class="row">

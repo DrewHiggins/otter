@@ -1,0 +1,48 @@
+<h1>Add a New Brother</h1>
+<hr />
+<%= form_for @brother, html: {class: "form-horizontal center"} do |f| %>
+  <div class="form-group">
+    <%= f.label :first_name, "Name:", class: "col-md-2 control-label" %>
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-sm-6">
+          <%= f.text_field :first_name, class: "form-control", placeholder: "First Name" %>
+        </div>
+        <div class="col-sm-6">
+          <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :family_id, "Family:", class: "col-md-2 control-label" %>
+    <div class="col-md-9">
+      <%= f.collection_select :family_id, Family.all, :id, :name, {include_blank: false}, {class: "form-control"} %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :rush_class_id, "Rush Class:", class: "col-md-2 control-label" %>
+    <div class="col-md-9">
+      <%= f.collection_select :rush_class_id, RushClass.all, :id, :greek_name, {include_blank: false} , {class: "form-control"}%>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :parent_id, "Big Brother:", class: "col-md-2 control-label" %>
+    <div class="col-md-9">
+      <%= f.collection_select :parent_id, Brother.all, :id, :full_name, {include_blank: false}, {class: "form-control"} %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :status, "Status:", class: "col-md-2 control-label" %>
+    <div class="col-md-9">
+      <%= f.select :status, ['Active', 'Alumni', 'Expelled', 'Inactive', 'Resigned'], {include_blank: false}, {class: "form-control"} %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-md-2 control-label" for="submit">&nbsp;</div>
+    <div class="col-md-9">
+      <%= f.submit "Submit", {class: "btn btn-default btn-primary", id: "submit"} %>
+      <%= link_to "Cancel", {action: 'show', id: @brother.id}, class: 'btn btn-danger' %>
+    </div>
+  </div>
+<% end %>
