@@ -1,8 +1,31 @@
 <h1>Brothers</h1>
-<% @brother_dict.each do |letter, brother_list| %>
-  <h2><%= letter.to_s.upcase %></h2>
-  <hr />
-  <% brother_list.each do |brother| %>
-    <%= link_to brother.full_name, brother %><br />
+
+<ul class="nav nav-pills">
+  <% ('A'..'Z').each do |letter| %>
+    <%= content_tag 'li', link_to(letter, "?filter=#{letter}"),
+      class: ('active' if params[:filter] == letter) %>
   <% end %>
-<% end %>
+</ul>
+<hr />
+<table class="table">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Family</th>
+      <th>Rush Class</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @brothers.each do |brother| %>
+      <tr>
+        <td><%= link_to brother.first_name, brother %></td>
+        <td><%= link_to brother.last_name, brother %></td>
+        <td><%= brother.family.name %></td>
+        <td><%= brother.rush_class.greek_name %></td>
+        <td><%= status_pill(brother.status) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
