@@ -53,9 +53,17 @@ a:hover, a:focus {
     }
   }
   .navbar-brand {
+    line-height: 7px;
     img {
+      margin-bottom: 0;
       max-height: 100%;
       width: auto;
+    }
+    .version {
+      color: #ffdb4d;
+      font-size: 10px;
+      margin-left: -3px;
+      text-transform: uppercase;
     }
   }
   input[type="text"] {

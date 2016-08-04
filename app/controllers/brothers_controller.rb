@@ -3,7 +3,7 @@ class BrothersController < ApplicationController
     unless params[:filter].nil?
       @brothers = Brother.where('last_name LIKE ?', "#{params[:filter]}%").order(:last_name)
     else
-      @brothers = Brother.all
+      @brothers = Brother.all.order(:last_name)
     end
     respond_to do |format|
       format.html #index.html.erb

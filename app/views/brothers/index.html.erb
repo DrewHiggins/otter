@@ -23,7 +23,7 @@
         <td><%= link_to brother.first_name, brother %></td>
         <td><%= link_to brother.last_name, brother %></td>
         <td><%= brother.family.name %></td>
-        <td><%= brother.rush_class.greek_name %></td>
+        <td><%= brother.rush_class.greek_name if brother.rush_class %></td>
         <td><%= status_pill(brother.status) %></td>
       </tr>
     <% end %>
