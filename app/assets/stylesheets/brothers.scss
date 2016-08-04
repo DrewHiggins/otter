@@ -70,3 +70,8 @@ input{
   }
   float: right;
 }
+
+.nav-pills > li.active > a {
+  background-color: #400080 !important;
+  color: #ffdb4d !important;
+}
