@@ -15,8 +15,12 @@ class BrothersController < ApplicationController
     @brother = Brother.find(params[:id])
     @org_chart_data = []
     @brother.descendants.each do |d|
+      name = d.full_name
+      parent_name = d.parent.full_name
+      name = name + '*' if d.status == "Expelled" || d.status == "Resigned"
+      parent_name = parent_name + '*' if d.parent.status == "Expelled" || d.parent.status == "Resigned"
       @org_chart_data.push([
-        d.full_name, d.parent.full_name, ""
+        name, parent_name, ""
       ])
     end
   end
