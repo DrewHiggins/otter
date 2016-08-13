@@ -9,4 +9,20 @@ class FamiliesController < ApplicationController
       @brother_dict[first_letter].push(brother)
     end
   end
+
+  def new
+    @family = Family.new
+  end
+
+  def create
+    @family = Family.create(family_params)
+    if @family.save
+      redirect_to @family, notice: 'Successfully created new family'
+    end
+  end
+
+  private
+  def family_params
+    params.require(:family).permit(:name)
+  end
 end

@@ -1,9 +1,13 @@
 <h1 style="text-align: center;"><%= @family.name %></h1>
 
-<% @brother_dict.each do |letter, brother_list| %>
-  <h2><%= letter.to_s.upcase %></h2>
-  <hr />
-  <% brother_list.each do |brother| %>
-    <%= link_to brother.full_name, brother %><br />
+<% unless @brother_dict.empty? %>
+  <% @brother_dict.each do |letter, brother_list| %>
+    <h2><%= letter.to_s.upcase %></h2>
+    <hr />
+    <% brother_list.each do |brother| %>
+      <%= link_to brother.full_name, brother %><br />
+    <% end %>
   <% end %>
+<% else %>
+  <p class="align: center; color: #aaa;"><em>No brothers are in this family</em></p>
 <% end %>
