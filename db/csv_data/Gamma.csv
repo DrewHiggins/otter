@@ -1,0 +1,80 @@
+ID2,Roy Issac,ID1,Belinda Bell,Fall 1993,Delta,Expelled,1,ID2
+ID3,Karen Romano,ID2,Roy Issac,Spring 1994,Epsilon,Alumin,1,ID3
+ID4,Alisa Foy,ID2,Roy Issac,Spring 1995,Eta,Alumni,1,ID4
+ID5,Amy Jones,ID3,Karen Romano,Fall 1994,Zeta,Alumni,1,ID5
+ID6,Melissa Harris,ID4,Alisa Foy,Fall 1995,Theta,Expelled,1,ID6
+ID7,Janet Graham,ID5,Amy Jones,Spring 1995,Eta,Alumni,1,ID7
+ID8,David Hurwitz,ID7,Janet Graham,Fall 1995,Theta,Alumni,1,ID8
+ID9,Lorendana Licchi,ID8,David Hurwitz,Spring 1996,Iota,Alumni,1,ID9
+ID10,Justin Bucks,ID9,Lorendana Licchi,Spring 1997,Lambda,Alumni,1,ID10
+ID11,Jeff Brown,ID10,Justin Bucks,Fall 1998,Xi,Alumni,1,ID11
+ID12,Jess Liester,ID11,Jeff Brown,Fall 1999,Pi,Alumni,1,ID12
+ID13,Maggie Fox,ID12,Jess Liester,Spring 2001,Tau,Alumni,1,ID13
+ID14,Jessica McCord,ID13,Maggie Fox,Fall 2001,Upsilon,Alumni,1,ID14
+ID15,Blair Sterling,ID14,Jessica McCord,Fall 2002,Chi,Alumni,1,ID15
+ID16,Jack Tracy,ID13,Maggie Fox,Fall 2002,Chi,Expelled,1,ID16
+ID17,Jessica Baum,ID16,Jack Tracy,Spring 2003,Psi,Expelled,1,ID17
+ID18,Jaci Schlott,ID16,Jack Tracy,Spring 2004,Alpha Alpha,Alumni,1,ID18
+ID19,Karen Ross,ID18,Jaci Schlott,Fall 2004,Alpha Beta,Alumni,1,ID19
+ID20,Jackie Yernall,ID18,Jaci Schlott,Spring 2005,Alpha Gamma,Expelled,1,ID20
+ID21,Marci Gleason,ID7,Janet Graham,Spring 1996,Iota,Alumni,1,ID21
+ID22,Tania Chew,ID21,Marci Gleason,Spring 1997,Lambda,Alumni,1,ID22
+ID23,Jill Pattishaw,ID22,Tania Chew,Fall 1997,Mu,Alumni,1,ID23
+ID24,April Wood,ID23,Jill Pattishaw,Fall 1998,Xi,Alumni,1,ID24
+ID25,Megan George,ID24,April Wood,Spring 2000,Rho,Transferred,1,ID25
+ID26,Alison Dietz,ID9,Lorendana Licchi,Fall 1997,Mu,Alumni,1,ID26
+ID27,Stu Brooks,ID26,Alison Dietz,Fall 1998,Xi,Alumni,1,ID27
+ID28,Erin Falconer,ID27,Stu Brooks,Spring 1999,Omicron,Alumni,1,ID28
+ID29,Kathleen Kiley,ID26,Alison Dietz,Fall 1997,Mu,Expelled,1,ID29
+ID30,Sarah Hayes,ID29,Kathleen Kiley,Fall 1998,Xi,Alumni,1,ID30
+ID31,Lydia Sit,ID30,Sarah Hayes,Spring 2000,Rho,Alumni,1,ID31
+ID32,Aaron Grzasko,ID31,Lydia Sit,Fall 2000,Sigma,Alumni,1,ID32
+ID33,Christie Graham,ID32,Aaron Grzasko,Spring 2002,Phi,Alumni,1,ID33
+ID34,Teresa Ponikiewicz,ID33,Christie Graham,Fall 2002,Chi,Alumni,1,ID34
+ID35,Shannon Brown,ID19,Karen Ross,Spring 2005,Alpha Gamma,Alumni,1,ID35
+ID36,Sarah Booth,ID35,Shannon Brown,Spring 2006,Alpha Epsilon,Alumni,1,ID36
+ID37,Emily Spivak,ID36,Sarah Booth,Spring 2007,Alpha Eta,Alumni,1,ID37
+ID38,Paul Andrejko,ID36,Sarah Booth,Spring 2008,Alpha Iota,Alumni,1,ID38
+ID39,Megan Fricker,ID37,Emily Spivak,Fall 2007,Alpha Theta,Alumni,1,ID39
+ID40,Mary Downing,ID38,Paul Andrejko,Spring 2009,Alpha Lambda,Alumni,1,ID40
+ID41,Alina Beck,ID39,Megan Fricker,Spring 2008,Alpha Iota,Alumni,1,ID41
+ID42,Tara Lepelletier,ID39,Megan Fricker,Spring 2009,Alpha Lambda,Alumni,1,ID42
+ID43,Melissa Fritsch,ID42,Tara Lepelletier,Fall 2009,Alpha Mu,Alumni,1,ID43
+ID44,Erica Lisses,ID42,Tara Lepelletier,Fall 2010,Alpha Xi,Alumni,1,ID44
+ID45,Alyssa Maestas,ID44,Erica Lisses,Fall 2011,Alpha Pi,Alumni,1,ID45
+ID46,Emily Akerson,ID43,Melissa Fritsch,Spring 2010,Alpha Nu,Alumni,1,ID46
+ID47,Tiffany Baumann,ID46,Emily Akerson,Spring 2011,Alpha Omicron,Alumni,1,ID47
+ID48,Kristin Fazio,ID47,Tiffany Baumann,Fall 2011,Alpha Pi,Alumni,1,ID48
+ID49,Gaby Houser,ID47,Tiffany Baumann,Spring 2012,Alpha Rho,Alumni,1,ID49
+ID50,Latiana Blue,ID47,Tiffany Baumann,Fall 2012,Alpha Sigma,Transferred,1,ID50
+ID51,Ann Semel,ID45,Alyssa Maestas,Spring 2012,Alpha Rho,Alumni,1,ID51
+ID52,Yessenia Moreno,ID45,Alyssa Maestas,Fall 2012,Alpha Sigma,Expelled,1,ID52
+ID53,Janee Minor,ID51,Ann Semel,Fall 2012,Alpha Sigma,Resigned,1,ID53
+ID54,Laurel Petrulionis,ID51,Ann Semel,Spring 2013,Alpha Tau,Active,1,ID54
+ID55,Derek Reigel,ID54,Laurel Petrulionis,Fall 2013,Alpha Upsilon,Active,1,ID55
+ID56,Holly Weinschenk,ID55,Derek Reigel,Spring 2014,Alpha Phi,Active,1,ID56
+ID57,Rickie Huang,ID55,Derek Reigel,Fall 2014,Alpha Chi,Active,1,ID57
+ID58,Jessica Scarbrough,ID54,Laurel Petrulionis,Fall 2013,Alpha Upsilon,Alumni,1,ID58
+ID59,Tessa Jackson,ID58,Jessica Scarbrough,Spring 2014,Alpha Phi,Transferred,1,ID59
+ID60,Katelyn Maltais,ID58,Jessica Scarbrough,Fall 2014,Alpha Chi,Active,1,ID60
+ID61,Kaitlyn Imel,ID48,Kristin Fazio,Spring 2012,Alpha Rho,Alumni,1,ID61
+ID62,Stephanie Jeffer,ID48,Kristin Fazio,Fall 2013,Alpha Upsilon,Alumni,1,ID62
+ID63,Mary Weaver,ID62,Stephanie Jeffer,Fall 2014,Alpha Chi,Active,1,ID63
+ID64,Anna Chen,ID61,Kaitlyn Imel,Spring 2013,Alpha Tau,Active,1,ID64
+ID65,Emily Lynch,ID64,Anna Chen,Spring 2014,Alpha Phi,Alumni,1,ID65
+ID66,Jami Reber,ID65,Emily Lynch,Fall 2014,Alpha Chi,Active,1,ID66
+ID67,Jillian Pavlick,ID49,Gaby Houser,Fall 2012,Alpha Sigma,Alumni,1,ID67
+ID68,Amy Bodnar,ID67,Jillian Pavlick,Fall 2013,Alpha Upsilon,Active,1,ID68
+ID69,Kate Rouleau,ID49,Gaby Houser,Spring 2013,Alpha Tau,Alumni,1,ID69
+ID70,Sarah Bruce,ID69,Kate Rouleau,Spring 2014,Alpha Phi,Active,1,ID70
+ID71,Aimei Lund,ID49,Gaby Houser,Spring 2014,Alpha Phi,Active,1,ID71
+ID72,Leah Robertson,ID57,Rickie Huang,Spring 2015,Alpha Psi,Active,1,ID72
+ID73,Carly Colavecchi,ID57,Rickie Huang,Spring 2015,Alpha Psi,Active,1,ID73
+ID74,Dhruvish Mehta,ID54,Laurel Petrulionis,Spring 2015,Alpha Psi,Active,1,ID74
+ID75,Miranda Nadeo,ID70,Sarah Bruce,Spring 2015,Alpha Psi,Active,1,ID75
+ID76,Hannah Phillips,ID58,Jessica Scarbrough,Spring 2015,Alpha Psi,Active,1,ID76
+ID77,Kendra Reynolds,ID71,Aimei Lund,Spring 2015,Alpha Psi,Active,2,ID77
+ID78,Kyle Sawyer,ID54,Laurel Petrulionis,Spring 2015,Alpha Psi,Active,3,ID78
+ID79,Qi Weng,ID64,Anna Chen,Spring 2015,Alpha Psi,Active,4,ID79
+ID80,Amanda Winkler,ID68,Amy Bodnar,Spring 2015,Alpha Psi,Active,5,ID80
+ID81,Kim Erb,ID56,Holly Weinschenk,Spring 2016,Alpha Psi,Active,6,ID81

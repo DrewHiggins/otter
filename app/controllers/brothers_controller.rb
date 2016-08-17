@@ -52,6 +52,15 @@ class BrothersController < ApplicationController
     end
   end
 
+  def destroy
+    @brother = Brother.find(params[:id]).destroy
+    if @brother.destroy
+      redirect_to '/brothers', notice: 'Successfully deleted brother'
+    else
+      redirect_to @brother, notice: 'Error: Could not delete brother'
+    end
+  end
+
   private
   def brother_params
     params.require(:brother).permit(

@@ -4,6 +4,8 @@
     <% if current_user && current_user.username == 'historian' %>
       <%= link_to raw('<i class="fa fa-pencil"></i>'),
         {:action => 'edit', id: @brother.id} %>
+      <%= link_to raw('<i class="fa fa-trash"></i>'),
+        {:action => 'destroy', id: @brother.id} %>
     <% end %>
   </div>
 </h1>
