@@ -5,7 +5,7 @@ class AddTauBrothers < ActiveRecord::Migration
     Brother.create(first_name: 'Faith', last_name: 'Milazzo', status: 'Alumni', family: tau_fam)
     require 'csv'
     orphans = [] # to store bros who come earlier than their bigs in the list
-    CSV.foreach("/Users/drew/Code/otter/db/csv_data/Tau.csv") do |line|
+    CSV.foreach("../csv_data/Tau.csv") do |line|
       # get name info
       name = line[1].split(" ")
       first_name, last_name = [name[0], name[1]]
