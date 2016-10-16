@@ -43,9 +43,11 @@ class AddTauBrothers < ActiveRecord::Migration
 
   def down
     @tau = Family.find_by(name: 'Tau')
-    Brother.where(family_id: @tau.id).each do |brother|
-      brother.destroy
+    unless @tau.nil?
+      Brother.where(family_id: @tau.id).each do |brother|
+        brother.destroy
+      end
+      @tau.destroy
     end
-    @tau.destroy
   end
 end

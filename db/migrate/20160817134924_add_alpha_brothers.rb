@@ -8,9 +8,11 @@ class AddAlphaBrothers < ActiveRecord::Migration
 
   def down
     alpha_fam = Family.find_by(name: 'Alpha')
-    Brother.where(family_id: alpha_fam.id).each do |brother|
-      brother.destroy
+    unless alpha_fam.nil?
+      Brother.where(family_id: alpha_fam.id).each do |brother|
+        brother.destroy
+      end
+      alpha_fam.destroy
     end
-    alpha_fam.destroy
   end
 end

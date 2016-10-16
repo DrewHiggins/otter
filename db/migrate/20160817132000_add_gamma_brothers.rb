@@ -42,9 +42,11 @@ class AddGammaBrothers < ActiveRecord::Migration
 
   def down
     @gamma = Family.find_by(name: 'Gamma')
-    Brother.where(family_id: @gamma.id).each do |brother|
-      brother.destroy
+    unless @gamma.nil?
+      Brother.where(family_id: @gamma.id).each do |brother|
+        brother.destroy
+      end
+      @gamma.destroy
     end
-    @gamma.destroy
   end
 end

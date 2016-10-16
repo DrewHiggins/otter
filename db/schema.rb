@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160817134924) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "branches", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -31,9 +34,9 @@ ActiveRecord::Schema.define(version: 20160817134924) do
     t.string   "ancestry"
   end
 
-  add_index "brothers", ["branch_id"], name: "index_brothers_on_branch_id"
-  add_index "brothers", ["family_id"], name: "index_brothers_on_family_id"
-  add_index "brothers", ["rush_class_id"], name: "index_brothers_on_rush_class_id"
+  add_index "brothers", ["branch_id"], name: "index_brothers_on_branch_id", using: :btree
+  add_index "brothers", ["family_id"], name: "index_brothers_on_family_id", using: :btree
+  add_index "brothers", ["rush_class_id"], name: "index_brothers_on_rush_class_id", using: :btree
 
   create_table "families", force: :cascade do |t|
     t.string   "name"
