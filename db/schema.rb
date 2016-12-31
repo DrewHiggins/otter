@@ -59,4 +59,7 @@ ActiveRecord::Schema.define(version: 20160817134924) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "brothers", "branches"
+  add_foreign_key "brothers", "families"
+  add_foreign_key "brothers", "rush_classes"
 end

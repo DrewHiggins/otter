@@ -51,3 +51,10 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-sass'
 
 gem 'bcrypt'
+
+# used for storing environment variables
+gem 'figaro'
+
+gem 'rails_12factor', group: :production
+
+ruby "2.3.0"

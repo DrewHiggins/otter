@@ -4,7 +4,7 @@ class AddGammaBrothers < ActiveRecord::Migration
     Brother.create(first_name: 'Belinda', last_name: 'Bell', status: 'Alumni', family_id: gamma_fam.id)
     require 'csv'
     orphans = [] # to store bros who come earlier than their bigs in the list
-    CSV.foreach("../db/csv_data/Gamma.csv") do |line|
+    CSV.foreach("#{ENV["OTTER_ROOT"]}/db/csv_data/Gamma.csv") do |line|
       # get name info
       name = line[1].split(" ")
       first_name, last_name = [name[0], name[1]]
