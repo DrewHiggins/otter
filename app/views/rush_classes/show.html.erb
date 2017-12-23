@@ -1,0 +1,14 @@
+<h1>
+    <%= @rush_class.greek_name %>
+    <div class="admin-buttons">
+        <% if current_user && current_user.username == 'historian' %>
+        <%= link_to raw('<i class="fa fa-pencil"></i>'),
+            {:action => 'edit', id: @rush_class.id} %>
+        <%= link_to raw('<i class="fa fa-trash"></i>'),
+            @rush_class, action: :destroy, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+    </div>
+</h1>
+<% @class_members.each do |brother| %>
+    <%= link_to brother.full_name, brother %><br />
+<% end %>

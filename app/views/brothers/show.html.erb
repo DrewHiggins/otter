@@ -5,7 +5,7 @@
       <%= link_to raw('<i class="fa fa-pencil"></i>'),
         {:action => 'edit', id: @brother.id} %>
       <%= link_to raw('<i class="fa fa-trash"></i>'),
-        {:action => 'destroy', id: @brother.id} %>
+        @brother, action: :destroy, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
   </div>
 </h1>

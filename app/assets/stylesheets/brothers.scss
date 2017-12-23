@@ -37,12 +37,12 @@
   padding: 3px 10px;
   text-align: center;
   text-transform: uppercase;
-  width: 70px;
+  min-width: 90px;
   display: inline-block;
   &.active {
     background-color: #5cb85c;
   }
-  &.alumni {
+  &.alumni, &.transferred {
     background-color: #337ab7;
   }
   &.expelled {

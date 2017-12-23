@@ -1,0 +1,20 @@
+<h1>Rush Classes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Class Name</th>
+            <th>Year</th>
+            <th>Semester</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @rush_classes.each do |rclass| %>
+            <tr>
+                <td><%= link_to rclass.greek_name, rclass %></td>
+                <td><%= rclass.year %></td>
+                <td><%= rclass.semester %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
